@@ -1576,15 +1576,14 @@ body:not(.light-mode) .learn ul{
 <section class="resume-section">
   <div class="resume-header">
     <h2>Resume</h2>
-    <p>Impact-driven academic and technical portfolio highlighting structured problem solving and data orientation.</p>
+    <p>A data-centric academic and technical portfolio demonstrating analytical clarity, intelligent system design, and secure backend-oriented execution.</p>
   </div>
 
   <div class="resume-viewer">
     <div class="resume-paper">
       <iframe 
-          id="resumeFrame"
-          src="assets/Ajay_Chauhan_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-        class="resume-frame">
+        class="resume-frame"
+        src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://ajaychauhanai.github.io/ajay-chauhan/assets/Ajay_Chauhan_Resume.pdf">
       </iframe>
     </div>
   </div>
@@ -1731,11 +1730,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     console.error(error);
   });
 });
-
-if (window.innerWidth <= 768) {
-  document.getElementById("resumeFrame").src =
-  "assets/Ajay_Chauhan_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=page-width";
-}
 
 </script>
 
