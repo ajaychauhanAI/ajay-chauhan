@@ -769,71 +769,102 @@ textarea:-webkit-autofill:focus {
   margin-bottom:.5rem;
 }
 
-/* ===== PROFESSIONAL DOCUMENT STYLE RESUME ===== */
+/* ===== PROFESSIONAL RESUME VIEWER (PRODUCTION GRADE) ===== */
 
 .resume-section{
   margin:6rem 0 4rem;
   text-align:center;
 }
 
-.resume-header {
-  margin-bottom: 13px;
+/* HEADER */
+.resume-header{
+  margin-bottom:1.5rem;
 }
+
 .resume-header h2{
-  font-size:2.2rem;
+  font-size:2rem;
   font-weight:600;
   letter-spacing:.02em;
 }
 
 .resume-header p{
-  font-size:1rem;
+  font-size:.95rem;
   color:#94a3b8;
-  max-width:600px;
+  max-width:620px;
   margin:0 auto;
 }
 
+/* VIEWER WRAPPER */
 .resume-viewer{
   display:flex;
   justify-content:center;
   align-items:center;
+  padding:0 1rem;
 }
 
+/* PAPER STYLE */
 .resume-paper{
-  width:820px;
-  max-width:100%;
+  width:100%;
+  max-width:900px;            /* desktop max width */
   background:#ffffff;
-  border-radius:8px;
+  border-radius:10px;
   overflow:hidden;
   box-shadow:
-    0 40px 80px rgba(0,0,0,.8),
+    0 50px 100px rgba(0,0,0,.85),
     0 0 0 1px rgba(255,255,255,.05);
+  transition:.3s ease;
 }
 
+/* PDF FRAME */
 .resume-frame{
   width:100%;
-  height:1140px;
+  height:100vh;               /* full screen height */
+  min-height:900px;           /* desktop minimum */
   border:none;
-  margin-top: 0.4rem;
 }
 
+/* DOWNLOAD BUTTON */
 .resume-action{
-  margin-top:3rem;
+  margin-top:2.5rem;
 }
 
 .resume-action a{
-  display: inline-block;
-  padding: .45rem 1.0rem;
-  border-radius: .8rem;
-  text-decoration: none;
-  font-weight: 600;
-  background: linear-gradient(135deg,#38bdf8,#22c55e);
-  color: #000;
-  transition: .3s ease;
+  display:inline-block;
+  padding:.55rem 1.3rem;
+  border-radius:.9rem;
+  text-decoration:none;
+  font-weight:600;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  color:#000;
+  transition:.3s ease;
 }
 
 .resume-action a:hover{
   transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(56,189,248,.4);
+  box-shadow:0 25px 50px rgba(56,189,248,.45);
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+
+@media(max-width:768px){
+
+  .resume-section{
+    margin:4rem 0 3rem;
+  }
+
+  .resume-paper{
+    border-radius:0;          /* full edge look on mobile */
+  }
+
+  .resume-frame{
+    height:95vh;              /* mobile full usable height */
+    min-height:auto;
+  }
+
+  .resume-action{
+    margin-top:1.8rem;
+  }
+
 }
 </style>
 </head>
